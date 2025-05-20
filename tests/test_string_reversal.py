@@ -2,7 +2,7 @@ import pytest
 from src.string_reversal import reverse_string
 
 def test_reverse_normal_string():
-    """Test reversing a normal string."""
+    """Test reversing a standard string."""
     assert reverse_string("hello") == "olleh"
 
 def test_reverse_empty_string():
@@ -20,6 +20,10 @@ def test_reverse_with_spaces():
 def test_reverse_with_special_chars():
     """Test reversing a string with special characters."""
     assert reverse_string("a!b@c#") == "#c@b!a"
+
+def test_reverse_with_mixed_chars():
+    """Test reversing a string with mixed characters."""
+    assert reverse_string("Hello, World! 123") == "321 !dlroW ,olleH"
 
 def test_reverse_with_unicode():
     """Test reversing a string with unicode characters."""
