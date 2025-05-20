@@ -1,6 +1,6 @@
 def reverse_string(input_string):
     """
-    Reverse a given string.
+    Reverse a given string manually without using slice notation or reverse().
 
     Args:
         input_string (str): The string to be reversed.
@@ -20,5 +20,9 @@ def reverse_string(input_string):
     if not isinstance(input_string, str):
         raise TypeError(f"Input must be a string, not {type(input_string).__name__}")
     
-    # Reverse the string
-    return input_string[::-1]
+    # Manually reverse the string using a list-based approach
+    reversed_chars = []
+    for char in input_string:
+        reversed_chars.insert(0, char)
+    
+    return ''.join(reversed_chars)
